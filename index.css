@@ -1,11 +1,39 @@
- body{ overflow: -moz-scrollbars-none; }
+ body{ 
+   overflow: -moz-scrollbars-none; 
+   margin: 0% !important;
+}
+
+
+header{
+  background-color: black;
+  padding:0% 1%;
+  text-align: center !important;
+}
+
+.header-cut-out{
+  color:transparent !important;
+  background-image: url('photos/11.jpeg');
+  -webkit-background-clip:text;
+  background-clip:text;
+  background: fit;
+  background-position-y: -297px;
+  background-position-X: -108PX;
+  background-repeat: no-repeat;
+}
+
+span{
+  margin:0%;
+  font-size:100px;
+  color: white;
+  font-family: 'Bebas Neue';
+}
 
 .grid-container {
     display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
-    grid-template-columns: auto auto auto auto;
-    margin: 10px
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-columns:  auto auto auto auto;
+    margin: 1% 2%;
   }
   
   .grid-item {
