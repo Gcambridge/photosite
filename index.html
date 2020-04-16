@@ -3,41 +3,66 @@
 <head>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-    <script>
-        function grid(v) {
-            var g = document.body;
-            for (var i = 0; i < v; i++) {
-                var grid = document.createElement("div");
-                grid.className = "grid-container";
-                for (var x = 1; x <= v; x++) {
-                    var cell = document.createElement("div");
-                    cell.className = "grid-item";
-                    cell.style.backgroundImage = 'url(photos/' + ((i * v) + x) + '.jpeg)';
-
-                    //   ]cell.innerText = (i * v) + x;
-                    grid.appendChild(cell);
-                }
-                g.appendChild(grid);
-            }
-        }
-    </script>
-
 </head>
-    <header>
-        <span>GAVRIEL</span> <span class ="header-cut-out">  CAMBRIDGE</span>
-        <!-- <div class = "contacts">
-            <img class="icon" src="photos/github.png" alt="github">
-            <img class="icon" src="photos/instagram.png" alt="instagram">
-            <img class="icon" src="photos/gmail.png" alt="gmail">
 
-        </div>  -->
-    </header>
+<!-- bad navbar -->
+<!-- <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <div class = "icon-container">
+        <a href="https://github.com/Gcambridge"><img class="icon" src="photos/github.png" alt="github"></a>
+    </div>
+    <div class = "icon-container">
+        <a href="https://instagram"><img class="icon" src="photos/instagram.png" alt="instagram"></a>
+    </div>
+    <div class = "icon-container">
+        <a href="https://github.com/Gcambridge"><img class="icon" src="photos/gmail.png" alt="gmail"></a>
+    </div>
+</div> -->
 
 <body>
-    <script>
-        grid(12)
-    </script>
-</body>
+    <header>
+        <!-- <button class="openbtn" onclick="openNav()">&#9776;</button> -->
+        <span>GAVRIEL <span class="header-cut-out">CAMBRIDGE</span></span>
+    </header>
 
+    <div id="Modal" class="modal">
+        <span class="close cursor" onclick="collapse()">&times;</span>
+            <div class="modal-content">
+            </div>
+    </div>
+
+    <div id="main">
+        <script>
+                function grid(v) {
+                    var g = document.body;
+                    for (var i = 0; i < v; i++) {
+                        var grid = document.createElement("div");
+                        grid.className = "grid-container";
+                        for (var x = 1; x <= v; x++) {
+                            var link = document.createElement("a");
+                            link.href = 'photos/' + ((i * v) + x) + '.jpeg'; 
+
+                            var cell = document.createElement("div");
+                            cell.className = "grid-item";
+                            cell.id = ((i * v) + x);
+
+                            // cell.innerText = cell.id;
+                            cell.style.backgroundImage = 'url(photos/' + cell.id + '.jpeg)';
+
+                            // cell.innerText =;
+                            //   ]cell.innerText = (i * v) + x;
+                            link.appendChild(cell);
+                            grid.appendChild(link);
+
+
+                        }
+                        g.appendChild(grid);
+                    }
+                }
+
+                grid(16);
+        </script>
+    </div>
+</body>
 </html>

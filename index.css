@@ -8,6 +8,7 @@ header{
   background-color: black;
   padding-top: .5%;
   text-align: center !important;
+
 }
 
 .header-cut-out{
@@ -22,7 +23,7 @@ header{
 }
 
 span{
-  /* margin:0% !important; */
+  padding:0% !important; 
   font-size:100px;
   color: white;
   font-family: 'Bebas Neue';
@@ -37,6 +38,7 @@ span{
     grid-template-columns:  auto auto auto auto;
     margin: 1% 2%;
   }
+
   
   .grid-item {
     background-size: contain !important;
@@ -44,15 +46,65 @@ span{
     background-attachment: relative;
     background-position: center; 
     padding: 50%;
+    filter: brightness(75%);
   }
 
+  .grid-item:hover{
+    filter: brightness(100%);
+  }
   
 .icon{
-  width: 3%;
+  width: 75%;
   height: auto;
+  padding-left:10%;
 }
 
-.contacts{
-  padding: 0% !important;
-  margin: 0% !important;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+  filter: brightness(1);
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
