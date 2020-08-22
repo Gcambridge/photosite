@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="title">                <a href="landing.html"><img class="icon" src="photos/back.jpg" alt="github"></a>
+                <span>Lizards</span></div>
+        </div>
+
+        <div class="icon-container">
+            <a href="https://github.com/Gcambridge" target="_blank"><img class="icon" src="photos/github.png"
+                    alt="github"></a>
+            <a href="https://www.instagram.com/gavrielcambridge/" target="_blank"><img class="icon"
+                    src="photos/instagram.png" alt="instagram"></a>
+        </div>
+
+    </header>
+
+    <div id="main">
+        <script>
+            function grid(v) {
+                var g = document.body;
+                for (var i = 0; i < v; i++) {
+                    var grid = document.createElement("div");
+                    grid.className = "grid-container";
+                    for (var x = 1; x <= v; x++) {
+                        var link = document.createElement("a");
+                        link.href = 'photos/lizards/' + ((i * v) + x) + '.jpeg';
+
+                        var cell = document.createElement("div");
+                        cell.className = "grid-item";
+                        cell.id = ((i * v) + x);
+
+                        // cell.innerText = cell.id;
+                        cell.style.backgroundImage = 'url(photos/lizards/' + cell.id + '.jpeg)';
+
+                        // cell.innerText =;
+                        //   ]cell.innerText = (i * v) + x;
+                        link.appendChild(cell);
+                        grid.appendChild(link);
+
+
+                    }
+                    g.appendChild(grid);
+                }
+            }
+
+            grid(16);
+        </script>
+    </div>
+</body>
+
+</html>
