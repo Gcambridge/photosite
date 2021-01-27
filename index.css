@@ -7,7 +7,6 @@
 header{
   background-color: black;
   padding: .5% 2%;
-
   display: grid;
   grid-column-gap: 25%;
   grid-template-columns:  auto auto;
@@ -15,12 +14,12 @@ header{
 
 .header-cut-out{
   color:transparent !important;
-  background-image: url('photos/St.Lucia/1.jpeg');
+  background-image: url('photos/plants/19.jpeg');
   -webkit-background-clip:text;
   background-clip:text;
   background: fit;
-  background-position-y: -306px;
-  background-position-X: -193PX;
+  background-position-y: -169px;
+  background-position-X: -313px;
   background-repeat: no-repeat;
   margin-top: -10%;
   padding-left: 1%;
@@ -47,31 +46,25 @@ header{
     display: grid;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 1% 2%;
   }
 
   .header{
-    height: 500px;
+    height: 550px;
     background-size: cover;
     background-repeat: no-repeat;
     
     }
   
-    h3, p{
-      color: white;
+    p{
+      color: rgb(255, 255, 255);
       margin:0 !important;
       font-family: 'Bebas Neue';
-    }
+      font-size:40px;
+      text-align: center; 
+      padding: 15%;
 
-    h3{
-      font-size:65px;
-      padding:0% 10%;
-    }
-     
-    p{
-      font-size:50px;
-      padding:10% 10% 2%;
     }
 
   .grid-item {
@@ -79,9 +72,9 @@ header{
     background-repeat: no-repeat;
     background-attachment: relative;
     background-position: center; 
-    font-size:40px;
+    font-size:30px;
     color: white;
-    font-family: 'Permanent Marker';
+    font-family: 'Bebas Neue';
     text-align: center; 
     padding: 150px 0px;
   }

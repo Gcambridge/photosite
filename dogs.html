@@ -10,7 +10,8 @@
     <header>
         <div>
             <div class="title"> <a href="index.html"><img class="icon" src="photos/back.jpg" alt="github"></a>
-                <span>Dogs</span></div>
+                <span>Dogs</span>
+            </div>
         </div>
 
         <div class="icon-container">
@@ -22,38 +23,8 @@
 
     </header>
 
-    <div id="main">
-        <script>
-            function grid(v) {
-                var g = document.body;
-                for (var i = 0; i < v; i++) {
-                    var grid = document.createElement("div");
-                    grid.className = "grid-container";
-                    for (var x = 1; x <= v; x++) {
-                        var link = document.createElement("a");
-                        link.href = 'photos/dogs/' + ((i * v) + x) + '.jpeg';
-
-                        var cell = document.createElement("div");
-                        cell.className = "grid-item";
-                        cell.id = ((i * v) + x);
-
-                        // cell.innerText = cell.id;
-                        cell.style.backgroundImage = 'url(photos/dogs/' + cell.id + '.jpeg)';
-
-                        // cell.innerText =;
-                        //   ]cell.innerText = (i * v) + x;
-                        link.appendChild(cell);
-                        grid.appendChild(link);
-
-
-                    }
-                    g.appendChild(grid);
-                }
-            }
-
-            grid(6);
-        </script>
-    </div>
+    <script src="temp.js"></script>
+    <script>grid(4, 'dogs');</script>
 </body>
 
 </html>
