@@ -14,12 +14,12 @@ header{
 
 .header-cut-out{
   color:transparent !important;
-  background-image: url('photos/plants/19.jpeg');
+  background-image: url('photos/plants/18.jpeg');
   -webkit-background-clip:text;
   background-clip:text;
   background: fit;
-  background-position-y: -169px;
-  background-position-X: -313px;
+  background-position-y: -194px;
+  background-position-X: -319px;
   background-repeat: no-repeat;
   margin-top: -10%;
   padding-left: 1%;
