@@ -14,7 +14,7 @@ header{
 
 .header-cut-out{
   color:transparent !important;
-  background-image: url('photos/plants/18.jpeg');
+  background-image: url('photos/cutout.jpeg');
   -webkit-background-clip:text;
   background-clip:text;
   background: fit;
@@ -51,9 +51,11 @@ header{
   }
 
   .header{
-    height: 550px;
-    background-size: cover;
+    height: 500px;
+    background-size:cover;
     background-repeat: no-repeat;
+    background-position-y: -125px;
+  
     
     }
   
